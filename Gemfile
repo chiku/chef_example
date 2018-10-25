@@ -6,6 +6,7 @@ group :development, :test do
   gem 'berkshelf'
   gem 'chef', '~> 12.22'
   gem 'foodcritic'
+  gem 'rake'
   gem 'rubocop'
 end
 
