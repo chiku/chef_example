@@ -8,16 +8,10 @@ service 'nginx' do
   action %i[enable start]
 end
 
-directory '/opt/app' do
-  owner 'root'
-  group 'root'
-end
-
-template '/opt/app/api.json' do
-  source 'api.json.erb'
-  owner 'root'
-  group 'root'
-  mode '0644'
+chef_example_app 'app' do
+  foo node['chef_example']['foo']
+  bar node['chef_example']['bar']
+  action :create
 end
 
 cookbook_file '/etc/nginx/default.d/app.conf' do
