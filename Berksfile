@@ -3,3 +3,7 @@
 source 'https://supermarket.chef.io'
 
 metadata
+
+group :test do
+  cookbook 'test_cookbook', path: './test/fixtures/cookbooks/test_cookbook'
+end

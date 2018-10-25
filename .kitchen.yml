@@ -26,3 +26,6 @@ suites:
     attributes:
       chef_example:
         foo: foo-value-override
+  - name: app_resource
+    run_list:
+      - recipe[test_cookbook]

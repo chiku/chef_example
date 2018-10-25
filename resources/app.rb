@@ -19,5 +19,6 @@ action :create do
     group 'root'
     mode '0644'
     variables vars
+    cookbook 'chef_example'
   end
 end
